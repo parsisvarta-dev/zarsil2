@@ -78,30 +78,30 @@
               <span id="asset-name">نقره</span>
               <span class="live-badge">زنده</span>
             </div>
-            <span id="asset-unit" style="font-size:0.8rem;color:var(--text-muted)">قیمت لحظه‌ای هر گرم (تومان)</span>
+            <span id="asset-unit" style="font-size:0.8rem;color:var(--text-muted)">قیمت لحظه‌ای هر اونس (تومان)</span>
           </div>
 
           <div class="price-hero">
             <div class="price-main">
-              <div class="price-value" id="price-value">۲,۸۵۰,۰۰۰</div>
-              <div class="price-change" id="price-change">▲ +۲.۴٪ &nbsp; +۶۷,۰۰۰ امروز</div>
+              <div class="price-value" id="price-value">...</div>
+              <div class="price-change" id="price-change">در حال دریافت...</div>
 
               <div class="price-meta">
                 <div class="meta-item">
-                  <span>روز گذشته</span>
-                  <strong id="meta-yesterday">۲,۷۸۳,۰۰۰</strong>
+                  <span>کمترین امروز</span>
+                  <strong id="meta-low">—</strong>
                 </div>
                 <div class="meta-item">
                   <span>بیشترین امروز</span>
-                  <strong id="meta-high">۲,۸۶۵,۰۰۰</strong>
+                  <strong id="meta-high">—</strong>
                 </div>
                 <div class="meta-item">
-                  <span>کمترین امروز</span>
-                  <strong id="meta-low">۲,۷۷۰,۰۰۰</strong>
+                  <span>روز گذشته</span>
+                  <strong id="meta-yesterday">—</strong>
                 </div>
                 <div class="meta-item">
                   <span>بازدهی ماهانه</span>
-                  <strong id="meta-monthly" style="color:var(--green)">+۱۲.۶٪</strong>
+                  <strong id="meta-monthly">—</strong>
                 </div>
               </div>
             </div>
@@ -114,57 +114,51 @@
 
         <!-- Global Market + Chart -->
         <div class="grid-2">
-
-          <!-- Global Market -->
           <section class="card">
             <div class="card-header">
               <div class="card-title" id="global-title">بازار جهانی نقره</div>
-              <span style="font-size:0.75rem;color:var(--text-muted)">قیمت هر اونس (دلار)</span>
+              <span style="font-size:0.75rem;color:var(--text-muted)">قیمت تقریبی</span>
             </div>
 
             <div style="display:flex;align-items:baseline;gap:12px;margin-bottom:8px;">
-              <span style="font-size:1.8rem;font-weight:700;color:var(--gold);" id="global-price">۳۱.۲۴</span>
-              <span class="price-change" id="global-change">▲ +۱.۸٪</span>
+              <span style="font-size:1.8rem;font-weight:700;color:var(--gold);" id="global-price">—</span>
+              <span class="price-change" id="global-change">—</span>
             </div>
 
             <div class="market-cities" id="market-cities">
               <div class="city">
                 <div class="name">نیویورک</div>
-                <div class="price" id="city-ny">۳۱.۲۲</div>
-                <div class="change" id="city-ny-c">+۱.۷٪</div>
+                <div class="price" id="city-ny">—</div>
+                <div class="change" id="city-ny-c">—</div>
               </div>
               <div class="city">
                 <div class="name">لندن</div>
-                <div class="price" id="city-lon">۳۱.۲۵</div>
-                <div class="change" id="city-lon-c">+۱.۹٪</div>
+                <div class="price" id="city-lon">—</div>
+                <div class="change" id="city-lon-c">—</div>
               </div>
               <div class="city">
                 <div class="name">توکیو</div>
-                <div class="price" id="city-tok">۳۱.۱۸</div>
-                <div class="change" id="city-tok-c">+۱.۶٪</div>
+                <div class="price" id="city-tok">—</div>
+                <div class="change" id="city-tok-c">—</div>
               </div>
               <div class="city">
                 <div class="name">دبی</div>
-                <div class="price" id="city-dxb">۳۱.۲۷</div>
-                <div class="change" id="city-dxb-c">+۲.۱٪</div>
+                <div class="price" id="city-dxb">—</div>
+                <div class="change" id="city-dxb-c">—</div>
               </div>
             </div>
           </section>
 
-          <!-- Chart -->
           <section class="card">
             <div class="card-header">
               <div class="card-title" id="chart-title">نمودار قیمت نقره</div>
             </div>
-
             <div class="timeframes">
               <button class="timeframe active">۲۴ ساعت</button>
               <button class="timeframe">۱ هفته</button>
               <button class="timeframe">۱ ماه</button>
               <button class="timeframe">۱ سال</button>
-              <button class="timeframe">همه</button>
             </div>
-
             <div class="chart-area">
               <div class="chart-line"></div>
             </div>
@@ -198,21 +192,21 @@
               <div class="card-title">ابزارها</div>
             </div>
             <div class="tools-row" style="grid-template-columns: 1fr 1fr;">
-              <div class="tool-card">
+              <div class="tool-card" onclick="openModal('calc-gold')">
                 <div class="icon">🧮</div>
                 <span>ماشین حساب طلا</span>
               </div>
-              <div class="tool-card">
+              <div class="tool-card" onclick="openModal('calc-karat')">
                 <div class="icon">⚖️</div>
                 <span>تبدیل عیار</span>
               </div>
-              <div class="tool-card">
+              <div class="tool-card" onclick="openModal('calc-profit')">
                 <div class="icon">📊</div>
                 <span>سود و زیان</span>
               </div>
-              <div class="tool-card">
+              <div class="tool-card" style="opacity:0.5;cursor:default;">
                 <div class="icon">🔔</div>
-                <span>هشدار قیمت</span>
+                <span>به زودی</span>
               </div>
             </div>
           </section>
@@ -227,8 +221,8 @@
             <div class="news-card">
               <div style="width:64px;height:64px;border-radius:10px;background:var(--bg-tertiary);display:flex;align-items:center;justify-content:center;font-size:1.8rem;">📰</div>
               <div class="news-content">
-                <h4>افزایش قیمت نقره در پی نااطمینانی در بازارهای جهانی</h4>
-                <p>۲ ساعت پیش</p>
+                <h4>افزایش قیمت طلا و نقره در بازارهای جهانی</h4>
+                <p>به‌روزرسانی لحظه‌ای</p>
               </div>
             </div>
           </section>
@@ -250,6 +244,81 @@
         </div>
 
       </main>
+    </div>
+  </div>
+
+  <!-- Modal: Gold Calculator -->
+  <div class="modal" id="modal-calc-gold">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3>ماشین حساب طلا</h3>
+        <button class="modal-close" onclick="closeModal('calc-gold')">×</button>
+      </div>
+      <div class="modal-body">
+        <label>وزن (گرم)</label>
+        <input type="number" id="gold-weight" placeholder="مثلاً ۱۰" step="0.01">
+        <label>عیار</label>
+        <select id="gold-karat">
+          <option value="0.750">۱۸ عیار</option>
+          <option value="0.875">۲۱ عیار</option>
+          <option value="0.916">۲۲ عیار</option>
+          <option value="0.999">۲۴ عیار</option>
+        </select>
+        <label>قیمت هر گرم ۱۸ عیار (تومان)</label>
+        <input type="number" id="gold-price" placeholder="قیمت روز">
+        <button class="btn btn-primary" style="width:100%;margin-top:16px;" onclick="calcGold()">محاسبه</button>
+        <div class="calc-result" id="gold-result">—</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: Karat Converter -->
+  <div class="modal" id="modal-calc-karat">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3>تبدیل عیار</h3>
+        <button class="modal-close" onclick="closeModal('calc-karat')">×</button>
+      </div>
+      <div class="modal-body">
+        <label>وزن (گرم)</label>
+        <input type="number" id="karat-weight" placeholder="مثلاً ۱۰" step="0.01">
+        <label>از عیار</label>
+        <select id="karat-from">
+          <option value="0.750">۱۸ عیار</option>
+          <option value="0.875">۲۱ عیار</option>
+          <option value="0.916">۲۲ عیار</option>
+          <option value="0.999">۲۴ عیار</option>
+        </select>
+        <label>به عیار</label>
+        <select id="karat-to">
+          <option value="0.750">۱۸ عیار</option>
+          <option value="0.875">۲۱ عیار</option>
+          <option value="0.916">۲۲ عیار</option>
+          <option value="0.999" selected>۲۴ عیار</option>
+        </select>
+        <button class="btn btn-primary" style="width:100%;margin-top:16px;" onclick="calcKarat()">تبدیل</button>
+        <div class="calc-result" id="karat-result">—</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: Profit / Loss -->
+  <div class="modal" id="modal-calc-profit">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3>محاسبه سود و زیان</h3>
+        <button class="modal-close" onclick="closeModal('calc-profit')">×</button>
+      </div>
+      <div class="modal-body">
+        <label>قیمت خرید (تومان به ازای هر گرم)</label>
+        <input type="number" id="profit-buy" placeholder="قیمت خرید">
+        <label>قیمت فروش (تومان به ازای هر گرم)</label>
+        <input type="number" id="profit-sell" placeholder="قیمت فروش">
+        <label>وزن (گرم)</label>
+        <input type="number" id="profit-weight" placeholder="مثلاً ۱۰" step="0.01">
+        <button class="btn btn-primary" style="width:100%;margin-top:16px;" onclick="calcProfit()">محاسبه</button>
+        <div class="calc-result" id="profit-result">—</div>
+      </div>
     </div>
   </div>
 

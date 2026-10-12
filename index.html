@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ZARSIL | قیمت لحظه‌ای طلا و نقره</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Intro Splash -->
+  <div class="intro">
+    <img src="logo.jpg" alt="ZARSIL Logo" class="logo-img">
+    <h1>ZARSIL</h1>
+  </div>
+
+  <!-- Main App -->
+  <div class="app">
+
+    <!-- Header -->
+    <header class="header">
+      <div class="header-right">
+        <div class="brand">
+          <img src="logo.jpg" alt="ZARSIL">
+          <div class="brand-text">
+            <strong>ZARSIL</strong>
+            <span>SMARTER MARKETS</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="search-box">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.35-4.35M17 11A6 6 0 1 1 5 11a6 6 0 0 1 12 0z"/>
+        </svg>
+        <input type="text" placeholder="جستجوی نماد، خبر یا تحلیل...">
+      </div>
+
+      <div class="header-actions">
+        <button class="icon-btn" title="اعلان‌ها">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M15 17h5l-1.4-1.4A2 2 0 0 1 18 14.2V11a6 6 0 1 0-12 0v3.2c0 .5-.2 1-.6 1.4L4 17h5m6 0v1a3 3 0 1 1-6 0v-1m6 0H9"/>
+          </svg>
+        </button>
+        <button class="btn btn-primary">ثبت سفارش</button>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="main">
+
+      <!-- Sidebar -->
+      <nav class="sidebar">
+        <div class="sidebar-item active" data-asset="silver">
+          <span class="emoji">🥈</span>
+          <span>نقره</span>
+        </div>
+        <div class="sidebar-item" data-asset="gold">
+          <span class="emoji">🥇</span>
+          <span>طلا</span>
+        </div>
+        <div class="sidebar-item" data-asset="dollar">
+          <span class="emoji">💲</span>
+          <span>دلار</span>
+        </div>
+      </nav>
+
+      <!-- Content -->
+      <main class="content">
+
+        <!-- Price Hero -->
+        <section class="card" id="price-card">
+          <div class="card-header">
+            <div class="card-title">
+              <span id="asset-name">نقره</span>
+              <span class="live-badge">زنده</span>
+            </div>
+            <span id="asset-unit" style="font-size:0.8rem;color:var(--text-muted)">قیمت لحظه‌ای هر گرم (تومان)</span>
+          </div>
+
+          <div class="price-hero">
+            <div class="price-main">
+              <div class="price-value" id="price-value">۲,۸۵۰,۰۰۰</div>
+              <div class="price-change" id="price-change">▲ +۲.۴٪ &nbsp; +۶۷,۰۰۰ امروز</div>
+
+              <div class="price-meta">
+                <div class="meta-item">
+                  <span>روز گذشته</span>
+                  <strong id="meta-yesterday">۲,۷۸۳,۰۰۰</strong>
+                </div>
+                <div class="meta-item">
+                  <span>بیشترین امروز</span>
+                  <strong id="meta-high">۲,۸۶۵,۰۰۰</strong>
+                </div>
+                <div class="meta-item">
+                  <span>کمترین امروز</span>
+                  <strong id="meta-low">۲,۷۷۰,۰۰۰</strong>
+                </div>
+                <div class="meta-item">
+                  <span>بازدهی ماهانه</span>
+                  <strong id="meta-monthly" style="color:var(--green)">+۱۲.۶٪</strong>
+                </div>
+              </div>
+            </div>
+
+            <div class="price-image" id="asset-emoji" style="display:flex;align-items:center;justify-content:center;font-size:3rem;">
+              🥈
+            </div>
+          </div>
+        </section>
+
+        <!-- Global Market + Chart -->
+        <div class="grid-2">
+
+          <!-- Global Market -->
+          <section class="card">
+            <div class="card-header">
+              <div class="card-title" id="global-title">بازار جهانی نقره</div>
+              <span style="font-size:0.75rem;color:var(--text-muted)">قیمت هر اونس (دلار)</span>
+            </div>
+
+            <div style="display:flex;align-items:baseline;gap:12px;margin-bottom:8px;">
+              <span style="font-size:1.8rem;font-weight:700;color:var(--gold);" id="global-price">۳۱.۲۴</span>
+              <span class="price-change" id="global-change">▲ +۱.۸٪</span>
+            </div>
+
+            <div class="market-cities" id="market-cities">
+              <div class="city">
+                <div class="name">نیویورک</div>
+                <div class="price" id="city-ny">۳۱.۲۲</div>
+                <div class="change" id="city-ny-c">+۱.۷٪</div>
+              </div>
+              <div class="city">
+                <div class="name">لندن</div>
+                <div class="price" id="city-lon">۳۱.۲۵</div>
+                <div class="change" id="city-lon-c">+۱.۹٪</div>
+              </div>
+              <div class="city">
+                <div class="name">توکیو</div>
+                <div class="price" id="city-tok">۳۱.۱۸</div>
+                <div class="change" id="city-tok-c">+۱.۶٪</div>
+              </div>
+              <div class="city">
+                <div class="name">دبی</div>
+                <div class="price" id="city-dxb">۳۱.۲۷</div>
+                <div class="change" id="city-dxb-c">+۲.۱٪</div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Chart -->
+          <section class="card">
+            <div class="card-header">
+              <div class="card-title" id="chart-title">نمودار قیمت نقره</div>
+            </div>
+
+            <div class="timeframes">
+              <button class="timeframe active">۲۴ ساعت</button>
+              <button class="timeframe">۱ هفته</button>
+              <button class="timeframe">۱ ماه</button>
+              <button class="timeframe">۱ سال</button>
+              <button class="timeframe">همه</button>
+            </div>
+
+            <div class="chart-area">
+              <div class="chart-line"></div>
+            </div>
+          </section>
+        </div>
+
+        <!-- Trend + Tools -->
+        <div class="grid-2">
+          <section class="card">
+            <div class="card-header">
+              <div class="card-title" id="trend-title">روند بازار نقره</div>
+            </div>
+            <div class="trend-list">
+              <div class="trend-item">
+                <span class="label">کوتاه‌مدت (تا ۷ روز)</span>
+                <span class="value up">▲ صعودی</span>
+              </div>
+              <div class="trend-item">
+                <span class="label">میان‌مدت (۱ تا ۳ ماه)</span>
+                <span class="value neutral">→ ثبات</span>
+              </div>
+              <div class="trend-item">
+                <span class="label">بلندمدت (بیش از ۳ ماه)</span>
+                <span class="value strong">▲ رشد</span>
+              </div>
+            </div>
+          </section>
+
+          <section class="card">
+            <div class="card-header">
+              <div class="card-title">ابزارها</div>
+            </div>
+            <div class="tools-row" style="grid-template-columns: 1fr 1fr;">
+              <div class="tool-card">
+                <div class="icon">🧮</div>
+                <span>ماشین حساب طلا</span>
+              </div>
+              <div class="tool-card">
+                <div class="icon">⚖️</div>
+                <span>تبدیل عیار</span>
+              </div>
+              <div class="tool-card">
+                <div class="icon">📊</div>
+                <span>سود و زیان</span>
+              </div>
+              <div class="tool-card">
+                <div class="icon">🔔</div>
+                <span>هشدار قیمت</span>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <!-- Bottom Section -->
+        <div class="bottom-grid">
+          <section class="card">
+            <div class="card-header">
+              <div class="card-title">آخرین اخبار</div>
+            </div>
+            <div class="news-card">
+              <div style="width:64px;height:64px;border-radius:10px;background:var(--bg-tertiary);display:flex;align-items:center;justify-content:center;font-size:1.8rem;">📰</div>
+              <div class="news-content">
+                <h4>افزایش قیمت نقره در پی نااطمینانی در بازارهای جهانی</h4>
+                <p>۲ ساعت پیش</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="card sentiment">
+            <div class="card-header">
+              <div class="card-title">شاخص احساسات بازار</div>
+            </div>
+            <div class="sentiment-score">۷۲</div>
+            <div class="sentiment-label">صعودی</div>
+          </section>
+
+          <section class="card">
+            <div class="quote">
+              «ارزش، فقط آنچه می‌بینی نیست، بلکه آن چیزی است که درک می‌کنی.»
+              <footer>— ZARSIL</footer>
+            </div>
+          </section>
+        </div>
+
+      </main>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

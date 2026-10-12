@@ -134,6 +134,10 @@ function openModal(id) {
   }
 }
 
+function showOrder() {
+  openModal('order');
+}
+
 function closeModal(id) {
   document.getElementById('modal-' + id).classList.remove('active');
 }
@@ -208,10 +212,25 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // Chart timeframes - change visual path
+  const chartPaths = {
+    '۲۴ ساعت': "M0,70 C30,65 50,50 80,45 C110,40 130,55 160,35 C190,20 220,40 250,25 C280,15 320,30 400,18",
+    '۱ هفته': "M0,60 C40,55 70,70 100,50 C140,30 170,45 200,40 C240,35 280,20 320,30 C360,40 380,25 400,22",
+    '۱ ماه': "M0,80 C50,75 80,60 120,55 C160,50 200,40 240,35 C280,30 320,45 360,25 C380,20 400,15 400,15",
+    '۱ سال': "M0,90 C60,85 100,70 150,60 C200,50 250,55 300,40 C340,30 370,20 400,10"
+  };
+
   document.querySelectorAll('.timeframe').forEach(btn => {
     btn.addEventListener('click', () => {
       document.querySelectorAll('.timeframe').forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
+      const label = btn.textContent.trim();
+      const path = chartPaths[label] || chartPaths['۲۴ ساعت'];
+      const chartLine = document.querySelector('.chart-line');
+      if (chartLine) {
+        chartLine.style.background = `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 100' preserveAspectRatio='none'%3E%3Cpath d='${path}' fill='none' stroke='%2322C55E' stroke-width='2.5'/%3E%3Cpath d='${path} L400,100 L0,100 Z' fill='url(%23grad)'/%3E%3Cdefs%3E%3ClinearGradient id='grad' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0%25' stop-color='%2322C55E' stop-opacity='0.25'/%3E%3Cstop offset='100%25' stop-color='%2322C55E' stop-opacity='0'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E") no-repeat center bottom`;
+        chartLine.style.backgroundSize = '100% 100%';
+      }
     });
   });
 
